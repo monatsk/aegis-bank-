@@ -11,10 +11,6 @@ Ce projet présente une landing page responsive pour Aegis Bank, une banque mobi
 - Responsive mobile-first
 - Aucun cookie utilisé
 
-## Captures d'écran
-![Capture d'écran mobile](screenshot-mobile.png)
-![Capture d'écran desktop](screenshot-desktop.png)
-
 ## Technologies
 - HTML5 sémantique
 - CSS3 avec animations
@@ -26,12 +22,12 @@ Ce projet présente une landing page responsive pour Aegis Bank, une banque mobi
 - Performance Lighthouse ≥ 90 (mobile)
 
 ## Déploiement
-- GitHub: [lien repo]
-- Netlify: [lien démo]
+- GitHub: https://github.com/monatsk/aegis-bank-
+- Netlify: https://guileless-marzipan-e80c15.netlify.app/
 
 ## Installation
 1. Cloner le repo
 2. Ouvrir `index.html` dans un navigateur
 
 ## Auteur
-[Nom] - Projet EFP 2026
+[Pauline Mona ] - Projet EFP 2026
