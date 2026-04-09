@@ -70,18 +70,23 @@ button,
 }
 
 /* ===========================
-   HEADER
-=========================== */
+      HEADER EXISTANT
+   =========================== */
+
 .header {
   flex-shrink: 0;
   backdrop-filter: blur(14px);
   background-color: transparent;
   border-bottom: 1px solid rgba(10, 127, 79, 0.1);
   border-radius: 32px;
+
 }
 
 .header__container {
   display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: var(--space-md);
@@ -89,7 +94,9 @@ button,
   margin: 0 auto;
   padding: var(--space-sm) var(--space-md);
 }
-
+.header__container a {
+width: fit-content;
+}
 .brand {
   display: inline-flex;
   align-items: center;
@@ -109,18 +116,34 @@ button,
 .brand__name {
   font-weight: 700;
   letter-spacing: 0.02em;
-font-family:"bungee";
+  font-family: "bungee";
 }
 
+/* ===========================
+      NAVIGATION
+   =========================== */
+
+/* Menu caché sur mobile */
 .nav__list {
-  display: flex;
-  flex-wrap: wrap;
+  display: none;
+  flex-direction: column;
   gap: 1rem;
   list-style: none;
+  background: white;
+  padding: 1rem;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.nav__item {
+/* Menu visible quand on clique */
+.nav__list.active {
+  display: flex;
 }
+
+.nav__item { }
 
 .nav__link {
   display: inline-flex;
@@ -134,6 +157,31 @@ font-family:"bungee";
 .nav__link:focus-visible {
   background-color: rgba(10, 127, 79, 0.12);
   transform: translateY(-1px);
+}
+
+/* ===========================
+      BURGER
+   =========================== */
+
+.nav__burger {
+  width: 30px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-left: auto;
+
+} 
+
+.nav__burger span {
+  height: 3px;
+  background: black;
+  width: 100%;
+  border-radius: 3px;
+}
+
+.nav__burger:hover span {
+  background: var(--color-link);
 }
 
 /* ===========================
@@ -476,7 +524,7 @@ font-family:"bungee";
 
   /* HEADER */
   .header__container {
-    flex-direction: column;
+    flex-direction: row;
     gap: 1rem;
   }
 
